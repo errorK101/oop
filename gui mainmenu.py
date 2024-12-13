@@ -1,7 +1,7 @@
 from tkinter import *
 from tkinter import ttk
 
-#update 2.0.
+#update 2.0.0
 win = Tk()
 win.geometry("1280x800+300+100")
 win.title("student info")
@@ -54,7 +54,7 @@ exit_btn = Button(enclosure_frame,text="exit", width=20, font=("Century Gothic",
 login_btn.pack(), exit_btn.pack()
 
 main_frame= Frame(win, bg= "white")
-Label(main_frame, text="main menu", font=("Century Gothic", 20), pady=20).pack()
+Label(main_frame, text="main menu", font=("Century Gothic", 20), pady=10).pack()
 viewB = Button(main_frame, text="view", width= 20, font=("Century Gothic", 20), command= view)
 addB = Button(main_frame, text="add", width= 20, font=("Century Gothic", 20), command= add)
 searchB = Button(main_frame, text="search", width= 20, font=("Century Gothic", 20), command= search)
@@ -66,26 +66,33 @@ viewB.place(x= 50, y=50), searchB.place(x=50, y=100), addB.place(x=50, y=150), l
 
 
 view_f = Frame(win, bg= "green" )
-Label(view_f, text="view", font=("Century Gothic", 20), pady=20).pack()
-exit1 = Button(view_f, text="exit", width= 20, font=("Century Gothic", 20), command= exit)
+Label(view_f, text="view", font=("Century Gothic", 20), pady=10).pack()
+exit1 = Button(view_f, text="back", width= 20, font=("Century Gothic", 20), command= exit)
 exit1.pack()
 
+
 add_f= Frame(win, bg= "blue" )
-Label(add_f, text="add, hi ", font=("Century Gothic", 20), pady=20).pack()
-exit2 = Button(add_f, text="exit", width= 20, font=("Century Gothic", 20), command= exit)
+Label(add_f, text="add, hi ", font=("Century Gothic", 20), pady=10).pack()
+exit2 = Button(add_f, text="back", width= 20, font=("Century Gothic", 20), command= exit)
 exit2.pack()
 
 all_f= Frame(win, bg= "#7CFC00" )
-Label(all_f, text="lahat nato", font=("Century Gothic", 20), pady=20).pack()
-exit4 = Button(all_f, text="exit", width= 20, font=("Century Gothic", 20), command= exit)
+Label(all_f, text="lahat nato", font=("Century Gothic", 20), pady=10).pack()
+exit4 = Button(all_f, text="back", width= 20, font=("Century Gothic", 20), command= exit)
 exit4.pack()
 
 search_f = Frame(win, bg= "pink" )
-Label(search_f, text="search", font=("Century Gothic", 20), pady=20).pack()
-Entry(search_f, font=("Century Gothic", 20)).pack()
-exit3 = Button(search_f, text="exit", width= 20, font=("Century Gothic", 20), command= exit)
+Label(search_f, text="search", font=("Century Gothic", 20), pady=10).pack()
+Entry(search_f, font=("Century Gothic", 20)).pack(padx=10, pady=20)
+exit3 = Button(search_f, text="back", width= 20, font=("Century Gothic", 20), command= exit)
 exit3.pack()
 
+
+
+exit1.place(relx= 0.5, rely=0.9, anchor="center")
+exit2.place(relx= 0.5, rely=0.9, anchor="center")
+exit3.place(relx= 0.5, rely=0.9, anchor="center")
+exit4.place(relx= 0.5, rely=0.9, anchor="center")
 
 
 win.mainloop()
